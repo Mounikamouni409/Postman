@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "0f49e104-6480-4d56-a9e6-8a657f8f46b4",
+		"name": "Spotify collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40293491"
+	},
+	"item": [
+		{
+			"name": "Albums",
+			"item": [
+				{
+					"name": "Albums",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "BQDxL2aZT3_zQEKKyns5fcaE1RRIXkekxVSURhlM9vPex4ZQ9O4WWkgqXmexg5wmihZOS8AX5L_muJMDSwyrWZOuXXuwESqt2y0vd8tiuZwAr7OOs_vNp9SJqIl6FosfwgIZXGk09dtVDoS95eWL-Bv1PVEaM1mKzmBVuzyXSeMAExy5pXuIaDBrWe5YVJ5BVvpDIhr7zEz-KFO3LYweTnQ8BaXkoK4BEobPld_VDRA7kjs4gzDucqAaUVNztNbiYOGz7rBhRZ_wVnzuug"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://api.spotify.com/v1/albums/{{id}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Several Albums",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://api.spotify.com/v1/albums/:id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spotify",
+								"com"
+							],
+							"path": [
+								"v1",
+								"albums",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "382ObEPsp2rxGrnsizN5TX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AlbumTracks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://api.spotify.com/v1/albums/{{id}}/tracks"
+					},
+					"response": []
+				},
+				{
+					"name": "User's Saved Albums",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"scope": "user-library-read",
+								"grant_type": "client_credentials",
+								"redirect_uri": "",
+								"tokenName": "Twitter token",
+								"addTokenTo": "header"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://api.spotify.com/v1/me/albums"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\": [\r\n        \"string\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.spotify.com/v1/me/albums/:id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spotify",
+								"com"
+							],
+							"path": [
+								"v1",
+								"me",
+								"albums",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "[\"382ObEPsp2rxGrnsizN5TX\",\"1A2GTWGtFfWp7KSQTwWOyo\",\"2noRn2Aes5aoNVsU6iWThc\"]"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Current User Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.spotify.com/v1/me"
+			},
+			"response": []
+		},
+		{
+			"name": "Available Markets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.spotify.com/v1/markets"
+			},
+			"response": []
+		},
+		{
+			"name": "Available Genre seeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.spotify.com/v1/recommendations/available-genre-seeds"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/artists/:id",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"artists",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "0TnOYISbd1XYRBk9myaseg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Album",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.spotify.com/v1/albums/{{id}}"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": {
+			"scope": "playlist-modify-public playlist-read-private playlist-modify-private user-library-read user-library-modify",
+			"authUrl": "https://accounts.spotify.com/authorize",
+			"accessTokenUrl": "https://accounts.spotify.com/api/token",
+			"clientSecret": "{{Client Secret}}",
+			"clientId": "{{Client ID}}",
+			"redirect_uri": "https://localhost:3000",
+			"tokenName": "Spotify Token",
+			"addTokenTo": "header"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
