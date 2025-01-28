@@ -1,0 +1,17 @@
+[
+   {
+      "endpoint":"api/register/qa",
+      "email":"mounika@reqres.com",
+      "password":"pistol"
+   },
+   {
+      "endpoint":"api/register/qa",
+      "email":"moun@reqres.in",
+      "password":"pnbvhbk"
+   },
+   {
+      "endpoint":"api/register/qa",
+      "email":"mounwjghj@reqres.in",
+      "password":"pnbvhbksjhdsbh"
+   }
+]
