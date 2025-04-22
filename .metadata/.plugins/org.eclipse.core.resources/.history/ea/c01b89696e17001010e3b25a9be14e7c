@@ -1,0 +1,15 @@
+package dataDrivenTesting;
+
+import java.io.FileInputStream;
+
+//Excel-->workbook-->sheet-->-->Row--> Cell
+public class ReadDataFromExcel {
+
+	public static void main(String[] args) {
+		//open the excel file in reading mode
+		
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\testdata\\BookData.xlsx")
+
+	}
+
+}

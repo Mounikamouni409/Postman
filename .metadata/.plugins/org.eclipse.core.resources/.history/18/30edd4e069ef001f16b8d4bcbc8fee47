@@ -1,0 +1,49 @@
+package com.seleniumwithtestng.testcases;
+
+import org.testng.annotations.Test;
+
+import com.seleniumwithtestng.base.Baseclass;
+import com.seleniumwithtestng.pages.SignUp;
+
+public class SignUp_Test extends Baseclass{
+	
+	@Test(priority = 0)
+	public void signupForEmptyFields() {
+		SignUp sign = new SignUp(driver);
+		sign.signUpAsNewUser();
+		sign.usernameField("");
+		sign.passwordField("");
+	}
+	
+	@Test(priority = 1)
+	public void signupForInvaildData() {
+		SignUp sign = new SignUp(driver);
+		sign.signUpAsNewUser();
+		sign.usernameField("magdhmcg");
+		sign.passwordField("hagedfjahfe");
+		sign.confirmPasswordField("hagedfjahfe");
+		sign.signUpButtonEnabled();
+	}
+	
+	@Test(priority = 2)
+	public void signupForInvaildUsername() {
+		SignUp sign = new SignUp(driver);
+		sign.signUpAsNewUser();
+		sign.usernameField("magdhmcg");
+		sign.passwordField("Wonul@123");
+		sign.confirmPasswordField("Wonul@123");
+		//sign.signUpButtonEnabled();
+	}
+	
+	@Test(priority = 3)
+	public void signupForvaildData() {
+		SignUp sign = new SignUp(driver);
+		sign.signUpAsNewUser();
+		sign.usernameField("mouni@gmail.com");
+		sign.passwordField("Mueh@123");
+		sign.confirmPasswordField("Mueh@123");
+		sign.signUpButtonEnabled();
+		//sign.clickOnSignUp();
+	}
+
+}

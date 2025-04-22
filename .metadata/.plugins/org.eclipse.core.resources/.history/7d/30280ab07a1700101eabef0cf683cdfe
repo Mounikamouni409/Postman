@@ -1,0 +1,50 @@
+package dataDrivenTesting;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+//Excel-->workbook-->sheet-->-->Row--> Cell
+public class ReadDataFromExcel {
+
+	public static void main(String[] args) throws Exception {
+		//open the excel file in reading mode
+		
+		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\testdata\\BookData.xlsx");
+		
+		XSSFWorkbook workbook = new XSSFWorkbook(file);
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
+		//XSSFSheet sheet = workbook.getSheetAt(0);// index
+		
+		// to find no of rows 
+		int totalRows = sheet.getLastRowNum();//no of rows occupied
+		int totalCells = sheet.getRow(totalRows).getLastCellNum();
+		
+		System.out.println("Total no of rows: "+ totalRows);//rows are counting from zero 0
+	
+		System.out.println("Total no of Cells: "+totalCells);// cells are counting from 1 
+		
+		//reading rows and cells
+		
+		for(int r=0;r<=totalRows;r++) {//one for rows 
+			//to get particular row
+			XSSFRow  currentRow =sheet.getRow(r);
+			
+			for(int c=0;c<totalCells;c++) {// one for cells
+				// as per java cells also starts from zero 
+				XSSFCell cell=currentRow.getCell(c);
+				System.out.println(cell.toString());// to get the data from cell
+				
+				
+			}
+		}
+		workbook.close();
+	}
+
+}
+

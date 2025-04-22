@@ -1,0 +1,15 @@
+package tests;
+
+import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.*;
+
+public class SOAP_XML_Request {
+	
+	@Test
+	public void validateSOAPXML() {
+		baseURI
+		
+	}
+
+}

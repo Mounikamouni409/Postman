@@ -1,0 +1,29 @@
+package testngExamples;
+
+import org.testng.annotations.Test;
+
+/*
+ 
+ 1) open app
+ 2)	Login
+ 3) Logout
+ 
+ */
+public class FirstTestcase {
+	
+	@Test
+	public void openApp() {
+		System.out.println("opening the application...");
+	}
+	@Test
+	public void login() {
+		
+		System.out.println("Login to application...");
+
+	}
+	@Test
+	public void logout() {
+		System.out.println("Logout the application...");
+	}
+
+}

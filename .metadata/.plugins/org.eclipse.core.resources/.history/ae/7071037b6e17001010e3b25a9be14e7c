@@ -1,0 +1,32 @@
+package dataDrivenTesting;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+//Excel-->workbook-->sheet-->-->Row--> Cell
+public class ReadDataFromExcel {
+
+	public static void main(String[] args) throws Exception {
+		//open the excel file in reading mode
+		
+		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\testdata\\BookData.xlsx");
+		
+		XSSFWorkbook workbook = new XSSFWorkbook(file);
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
+		//XSSFSheet sheet = workbook.getSheetAt(0);// index
+		
+		// to find no of rows 
+		int totalRows = sheet.getLastRowNum();//no of rows occupied
+		int totalCells = sheet.getRow(1).getLastCellNum();//for row 2 because index starts from 0 -- means row 1
+		
+		System.out.println("Total no of rows: "+ totalRows);
+		System.out.println("Total no of Cells: "+totalCells);
+	}
+
+}
+

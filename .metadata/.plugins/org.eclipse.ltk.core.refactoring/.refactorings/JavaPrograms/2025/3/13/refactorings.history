@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;programs.Fibinocci.java&apos; to &apos;Factorial.java&apos;&#x0D;&#x0A;- Original project: &apos;JavaPrograms&apos;&#x0D;&#x0A;- Original element: &apos;programs.Fibinocci.java&apos;&#x0D;&#x0A;- Renamed element: &apos;programs.Factorial.java&apos;" description="Rename compilation unit &apos;Fibinocci.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;programs{Fibinocci.java" name="Factorial.java" references="false" stamp="1742723473697" version="1.0"/>
+</session>

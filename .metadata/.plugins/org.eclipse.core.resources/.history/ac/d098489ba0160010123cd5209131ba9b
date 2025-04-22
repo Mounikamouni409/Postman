@@ -1,0 +1,31 @@
+package chromeoptionsActions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HeadlessTesting {
+
+	public static void main(String[] args) {
+		// Launching the browser(chrome)
+		
+		WebDriver driver = new ChromeDriver();
+		
+		//Open url of https://www.opencart.com/
+		
+		driver.get("https://www.opencart.com/");
+		
+		//validate title should be "Your store"
+		
+		String title = driver.getTitle();
+		
+		if(title.equals("Your Store")) {
+			System.out.println("Test Passed.....");
+		}
+		else {
+			System.out.println("Test Failed.....");
+		}
+		
+
+	}
+
+}

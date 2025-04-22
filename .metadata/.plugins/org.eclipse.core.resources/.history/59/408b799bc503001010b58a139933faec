@@ -1,0 +1,68 @@
+package com.seleniumwithtestng.pages;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import com.seleniumwithtestng.utilities.Utilities;
+
+public class SignUp extends Utilities {
+
+	public WebDriver driver;
+
+	public SignUp(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	@FindBy(xpath = "//button[@type='button'  and text()='Get Started']")
+	WebElement getStarted;
+	
+	@FindBy(xpath="//input[@id='outlined-basic']")
+	WebElement enterUsername;
+	
+	@FindBy(xpath="//input[@id='outlined-basic' and @type='password']")
+	WebElement enterPassword;
+	
+	@FindBy(xpath="//p[@id='outlined-basic-helper-text']")
+	WebElement helperText;
+	
+	@FindBy(xpath="//div[contains(@class,'css-1v4ccyo')]//input[@id='outlined-basic']")
+	WebElement enterConfirmPassword;
+	
+	@FindBy(xpath="//button[normalize-space()='Sign Up' and @type='button']")
+	WebElement signupButton;
+	
+
+	public void signUpAsNewUser() {
+		clickMethod(getStarted);
+	}
+
+	public void usernameField(String username) {
+		sendkeysMethod(enterUsername, username);
+	} 
+	
+	public void passwordField(String password) {
+		sendkeysMethod(enterPassword, password);
+		getText(helperText);//div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-1v4ccyo']//input[@id='outlined-basic']
+	}
+	public void confirmPasswordField(String confirmPassword) {
+		sendkeysMethod(enterConfirmPassword, confirmPassword);
+	}
+	public void signUpButtonEnabled() {
+	
+		boolean isButtonEnabled = signupButton.isEnabled();
+		Assert.assertTrue(isButtonEnabled, "Sign Up button should be enabled");
+	}
+	
+	public void clickOnSignUp() {
+		//clickMethod(signupButton);
+		Set<WebElement>  elem = (Set<WebElement>) driver.findElements(By.xpath("//button[normalize-space()='Sign Up' and @type='button']"));
+		elem.click();
+	}
+}

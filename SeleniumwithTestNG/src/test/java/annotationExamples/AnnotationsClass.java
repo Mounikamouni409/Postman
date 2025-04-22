@@ -1,0 +1,38 @@
+package annotationExamples;
+
+/*1)Login--> @BeforeMethod
+2)Search-->@Test
+3)Logout--> @AfterMethod
+
+1)Login--> @BeforeMethod
+2)Advanced Search-->@Test
+3)Logout--> @AfterMethod
+
+//if we want to use a method repeatedly for every testcase we might use of before and after methods
+*/
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class AnnotationsClass {
+	@BeforeMethod
+	public void login() {
+		System.out.println("Login..");
+	}
+	
+	@Test
+	public void search() {
+		System.out.println("search..");
+	}
+	@Test(priority=1)
+	public void advsearch() {
+		System.out.println("Advanced Search..");
+	}
+	@AfterMethod
+	public void logout() {
+		System.out.println("Logout..");
+
+	}
+
+}

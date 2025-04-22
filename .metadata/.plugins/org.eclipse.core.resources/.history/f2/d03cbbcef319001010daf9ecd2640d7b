@@ -1,0 +1,51 @@
+package utilities;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class CitiBank {
+
+	public static void main(String[] args) throws Exception {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://www.cit.com/cit-bank/resources/calculators/certificate-of-deposit-calculator");
+		driver.manage().window().maximize();
+		
+		String filepath = System.getProperty("user.dir")+"\\testdata\\CitiBank.xlsx";
+		int rows= ExcelUtils.getRowCount(filepath, "Sheet1");
+		
+		for(int i =0; i<=rows;i++) {
+			String depositAmount = ExcelUtils.getCellData(filepath, "Sheet1", i, 0);
+			String interest = ExcelUtils.getCellData(filepath,"Sheet1" , i, 1);
+			String duration = ExcelUtils.getCellData(filepath, "Sheet1", i, 2);
+			String comp = ExcelUtils.getCellData(filepath, "Sheet1", i, 3);
+			String total = ExcelUtils.getCellData(filepath, "Sheet1", i, 4);
+			
+			WebElement intialDeposit= driver.findElement(By.xpath("//input[@id='mat-input-0']"));
+			intialDeposit.clear();
+			intialDeposit.sendKeys(depositAmount);
+			
+			WebElement length = driver.findElement(By.xpath("//div[@class='mat-form-field-infix ng-tns-c102-1']"));
+			length.clear();
+			length.sendKeys(duration);
+			
+			WebElement rate = driver.findElement(By.xpath("//input[@id='mat-input-2']"));
+			rate.clear();
+			rate.sendKeys(interest);
+			
+			WebElement compound = driver.findElement(By.xpath("//div[@id='mat-select-value-1']"));
+			Select select = new Select(driver);
+			select.selectByVisibleText(comp);
+		}
+		
+		
+
+	}
+	
+
+}

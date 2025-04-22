@@ -1,0 +1,46 @@
+package utilities;
+
+import java.io.FileInputStream;
+import java.util.Collection;
+import java.util.Properties;
+import java.util.Set;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ReadingPropertiesFile {
+
+	public static void main(String[] args) throws Exception {
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\testdata\\config.properties");
+		prop.load(fis);//to load properties file
+		
+		String url = prop.getProperty("url");
+		String email = prop.getProperty("email");
+		String pass =prop.getProperty("password");
+		String oId= prop.getProperty("orderid");
+		String custId = prop.getProperty("custoId");
+		
+		System.out.println(url+"\t"+email+"\t"+pass+"\t"+oId+"\t"+custId+"\t");
+		//reading all the keys from properties file
+		//Set<String> keys = prop.stringPropertyNames();
+		//System.out.println(keys);
+		
+		Set<Object>keys= prop.keySet();
+		System.out.println(keys);
+		
+		//Reading all the values from properties file
+		Collection<Object> values = prop.values();
+		System.out.println(values);
+		
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get(url);
+		driver.close();
+		
+		fis.close();
+
+	}
+
+}

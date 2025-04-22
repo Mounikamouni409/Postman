@@ -1,0 +1,5 @@
+package chromeoptionsActions;
+
+public class DisableAutomatedMessage {
+
+}

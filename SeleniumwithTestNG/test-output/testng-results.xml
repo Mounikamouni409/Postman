@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-16T23:28:00 IST" name="Suite" finished-at="2025-04-16T23:28:00 IST" duration-ms="114">
+    <groups>
+    </groups>
+    <test started-at="2025-04-16T23:28:00 IST" name="FirstTest" finished-at="2025-04-16T23:28:00 IST" duration-ms="47">
+      <class name="annotationExamples.AnnotationsClass3">
+        <test-method is-config="true" signature="bt()[pri:0, instance:annotationExamples.AnnotationsClass3@22555ebf]" started-at="2025-04-16T23:28:00 IST" name="bt" finished-at="2025-04-16T23:28:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bt -->
+        <test-method is-config="true" signature="bc()[pri:0, instance:annotationExamples.AnnotationsClass3@22555ebf]" started-at="2025-04-16T23:28:00 IST" name="bc" finished-at="2025-04-16T23:28:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bc -->
+        <test-method is-config="true" signature="bm()[pri:0, instance:annotationExamples.AnnotationsClass3@22555ebf]" started-at="2025-04-16T23:28:00 IST" name="bm" finished-at="2025-04-16T23:28:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="t()[pri:0, instance:annotationExamples.AnnotationsClass3@22555ebf]" started-at="2025-04-16T23:28:00 IST" name="t" finished-at="2025-04-16T23:28:00 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t -->
+        <test-method is-config="true" signature="am()[pri:0, instance:annotationExamples.AnnotationsClass3@22555ebf]" started-at="2025-04-16T23:28:00 IST" name="am" finished-at="2025-04-16T23:28:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method signature="t1()[pri:0, instance:annotationExamples.AnnotationsClass3@22555ebf]" started-at="2025-04-16T23:28:00 IST" name="t1" finished-at="2025-04-16T23:28:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t1 -->
+        <test-method is-config="true" signature="bm()[pri:0, instance:annotationExamples.AnnotationsClass3@22555ebf]" started-at="2025-04-16T23:28:00 IST" name="bm" finished-at="2025-04-16T23:28:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method is-config="true" signature="am()[pri:0, instance:annotationExamples.AnnotationsClass3@22555ebf]" started-at="2025-04-16T23:28:00 IST" name="am" finished-at="2025-04-16T23:28:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="ac()[pri:0, instance:annotationExamples.AnnotationsClass3@22555ebf]" started-at="2025-04-16T23:28:00 IST" name="ac" finished-at="2025-04-16T23:28:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ac -->
+        <test-method is-config="true" signature="at()[pri:0, instance:annotationExamples.AnnotationsClass3@22555ebf]" started-at="2025-04-16T23:28:00 IST" name="at" finished-at="2025-04-16T23:28:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- at -->
+      </class> <!-- annotationExamples.AnnotationsClass3 -->
+    </test> <!-- FirstTest -->
+    <test started-at="2025-04-16T23:28:00 IST" name="SecondTest" finished-at="2025-04-16T23:28:00 IST" duration-ms="12">
+      <class name="annotationExamples.AnnotationsClass3">
+        <test-method is-config="true" signature="bs()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="bs" finished-at="2025-04-16T23:28:00 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bs -->
+        <test-method is-config="true" signature="bt()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="bt" finished-at="2025-04-16T23:28:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bt -->
+        <test-method is-config="true" signature="bm()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="bm" finished-at="2025-04-16T23:28:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method is-config="true" signature="bc()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="bc" finished-at="2025-04-16T23:28:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bc -->
+        <test-method signature="t()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="t" finished-at="2025-04-16T23:28:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t -->
+        <test-method is-config="true" signature="am()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="am" finished-at="2025-04-16T23:28:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="bm()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="bm" finished-at="2025-04-16T23:28:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="t1()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="t1" finished-at="2025-04-16T23:28:00 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t1 -->
+        <test-method is-config="true" signature="am()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="am" finished-at="2025-04-16T23:28:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="ac()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="ac" finished-at="2025-04-16T23:28:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ac -->
+        <test-method is-config="true" signature="at()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="at" finished-at="2025-04-16T23:28:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- at -->
+        <test-method is-config="true" signature="as()[pri:0, instance:annotationExamples.AnnotationsClass3@24aed80c]" started-at="2025-04-16T23:28:00 IST" name="as" finished-at="2025-04-16T23:28:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- as -->
+      </class> <!-- annotationExamples.AnnotationsClass3 -->
+    </test> <!-- SecondTest -->
+  </suite> <!-- Suite -->
+</testng-results>

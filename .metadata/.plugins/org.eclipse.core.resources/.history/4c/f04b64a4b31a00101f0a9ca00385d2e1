@@ -1,0 +1,15 @@
+package testngExamples;
+
+import org.testng.annotations.Test;
+/*
+1) Open the application
+2)test logo presence
+3)login
+4)close
+*/
+
+public class OrangeHRM {
+  @Test
+  public void f() {
+  }
+}

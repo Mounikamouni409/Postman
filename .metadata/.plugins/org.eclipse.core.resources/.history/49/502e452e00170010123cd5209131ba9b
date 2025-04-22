@@ -1,0 +1,38 @@
+package shadowDOM;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ShadowDOMElements {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://letcode.in/shadow");
+		driver.manage().window().maximize();
+		
+		
+		//1. Element inside single shadow DOM
+		SearchContext shadow = driver.findElement(By.cssSelector("#open-shadow")).getShadowRoot();
+		Thread.sleep(1000);
+		shadow.findElement(By.cssSelector("#fname")).sendKeys("hjbasgh");
+		
+		//2. Element inside nested shadow DOM
+		SearchContext shadow0 = driver.findElement(By.cssSelector("#open-shadow")).getShadowRoot();
+		Thread.sleep(1000);
+		
+	//	SearchContext shadow1 = shadow0.findElement(By.cssSelector(".field")).getShadowRoot();
+	//	Thread.sleep(1000);
+		
+		shadow0.findElement(By.cssSelector("#lname")).sendKeys("hdgshkg");
+		
+		
+		
+
+	}
+
+}
