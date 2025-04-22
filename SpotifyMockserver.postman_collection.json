@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "57bfdd25-1122-4d43-892c-6aa296079cc4",
+		"name": "SpotifyMockserver",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40293491"
+	},
+	"item": [
+		{
+			"name": "v1/albums/4aawyAB9vmqN3uQ7FjRGTy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{url}}/v1/albums/4aawyAB9vmqN3uQ7FjRGTy"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{url}}/v1/albums/4aawyAB9vmqN3uQ7FjRGTy"
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n  \"album_type\": \"compilation\",\n  \"total_tracks\": 9,\n  \"available_markets\": [\"CA\", \"BR\", \"IT\"],\n  \"external_urls\": {\n    \"spotify\": \"string\"\n  },\n  \"href\": \"string\",\n  \"id\": \"2up3OPMp9Tb4dAKM2erWXQ\",\n  \"images\": [\n    {\n      \"url\": \"https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228\",\n      \"height\": 300,\n      \"width\": 300\n    }\n  ],\n  \"name\": \"string\",\n  \"release_date\": \"1981-12\",\n  \"release_date_precision\": \"year\",\n  \"restrictions\": {\n    \"reason\": \"market\"\n  },\n  \"type\": \"album\",\n  \"uri\": \"spotify:album:2up3OPMp9Tb4dAKM2erWXQ\",\n  \"artists\": [\n    {\n      \"external_urls\": {\n        \"spotify\": \"string\"\n      },\n      \"href\": \"string\",\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"artist\",\n      \"uri\": \"string\"\n    }\n  ],\n  \"tracks\": {\n    \"href\": \"https://api.spotify.com/v1/me/shows?offset=0&limit=20\",\n    \"limit\": 20,\n    \"next\": \"https://api.spotify.com/v1/me/shows?offset=1&limit=1\",\n    \"offset\": 0,\n    \"previous\": \"https://api.spotify.com/v1/me/shows?offset=1&limit=1\",\n    \"total\": 4,\n    \"items\": [\n      {\n        \"artists\": [\n          {\n            \"external_urls\": {\n              \"spotify\": \"string\"\n            },\n            \"href\": \"string\",\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"artist\",\n            \"uri\": \"string\"\n          }\n        ],\n        \"available_markets\": [\"string\"],\n        \"disc_number\": 0,\n        \"duration_ms\": 0,\n        \"explicit\": false,\n        \"external_urls\": {\n          \"spotify\": \"string\"\n        },\n        \"href\": \"string\",\n        \"id\": \"string\",\n        \"is_playable\": false,\n        \"linked_from\": {\n          \"external_urls\": {\n            \"spotify\": \"string\"\n          },\n          \"href\": \"string\",\n          \"id\": \"string\",\n          \"type\": \"string\",\n          \"uri\": \"string\"\n        },\n        \"restrictions\": {\n          \"reason\": \"string\"\n        },\n        \"name\": \"string\",\n        \"preview_url\": \"string\",\n        \"track_number\": 0,\n        \"type\": \"string\",\n        \"uri\": \"string\",\n        \"is_local\": false\n      }\n    ]\n  },\n  \"copyrights\": [\n    {\n      \"text\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"external_ids\": {\n    \"isrc\": \"string\",\n    \"ean\": \"string\",\n    \"upc\": \"string\"\n  },\n  \"genres\": [],\n  \"label\": \"string\",\n  \"popularity\": 0\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://72b20a8d-cc13-4f60-b291-5499d5fd6b34.mock.pstmn.io"
+		}
+	]
+}
